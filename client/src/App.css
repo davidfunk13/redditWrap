@@ -22,10 +22,22 @@
   font-size: large;
 }
 
-.enter{
+.enter {
   width: 100%;
   height: auto;
 }
+.nav-wrapper {
+  font-size: 1.5rem;
+  height: 8rem;
+  background-color: darkgray;
+}
+
+.welcome-wrapper {
+  width: 45rem;
+  margin: 0 auto;
+  margin-top: 8rem
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
