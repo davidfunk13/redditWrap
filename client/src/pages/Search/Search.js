@@ -24,10 +24,13 @@ class Search extends Component {
     };
     render() {
         return (
+            <form>
             <SearchForm 
             id='search'
             onChange={this.handleInputChange}
             />
+            <button onClick={this.handleSearch}>Search</button>
+            </form>
         );
     }
 }

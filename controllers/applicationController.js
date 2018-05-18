@@ -1,33 +1,30 @@
 // import db from '../models'
 const db = require("../models");
-const dotEnv = require('dotenv').config()
-const snoowrap = require('snoowrap')
-
+const dotEnv = require("dotenv").config();
+const snoowrap = require("snoowrap");
 
 // Defining methods for the booksController
 module.exports = {
-  snooScrape: function (req, res) {
+  snooScrape: function(req, res) {
+    console.log(dotEnv);
 
-    console.log(dotEnv)
-
-    console.log(`you're in the backend ${req.params.sub}`)
+    console.log(`you're in the backend ${req.params.sub}`);
     const r = new snoowrap({
       userAgent: process.env.USER_AGENT,
       clientId: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      refreshToken: process.env.REFRESH_TOKEN,
+      refreshToken: process.env.REFRESH_TOKEN
     });
-    let searchQuery = req.params.sub
-    let subReddit = r.getSubreddit(searchQuery)
-    subReddit.getHot().then(function (results) {
-      console.log(results)
-      res.json(results)
+    let searchQuery = req.params.sub;
+    let subReddit = r.getSubreddit(searchQuery);
+    subReddit.getHot().then(function(results) {
+      console.log(results);
+      res.json(results);
     });
   },
-  getSaved: function (req, res) {
-    console.log('hello')
-    db.Post
-      .find()
+  getSaved: function(req, res) {
+    console.log("hello");
+    db.Post.find()
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.json(err));
@@ -38,13 +35,12 @@ module.exports = {
   //     .then(dbModel => res.json(dbModel))
   //     .catch(err => res.status(422).json(err));
   // },
-  save: function (req, res) {
-    console.log(req.body)
-    db.Post
-      .create(req.body)
+  save: function(req, res) {
+    console.log(req.body);
+    db.Post.create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.json(err));
-  },
+  }
   // update: function (req, res) {
   //   db.Book
   //     .findOneAndUpdate({ _id: req.params.id }, req.body)
