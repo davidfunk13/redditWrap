@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/davidfunk13/redditWrap#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "concurrently": "^3.5.1",
     "dotenv": "^5.0.1",
