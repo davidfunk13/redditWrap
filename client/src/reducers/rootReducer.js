@@ -1,10 +1,8 @@
-import { combineReducers } from 'redux';
-import friends from './friendReducer';
-import movies from './movieReducer';
+import { combineReducers } from "redux";
+import posts from "./postReducer";
 
 const rootReducer = combineReducers({
-  friends,
-  movies,
+  posts
 });
 
 export default rootReducer;

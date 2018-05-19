@@ -1,45 +1,55 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-.enter {
-  width: 100%;
-  height: auto;
-}
 .nav-wrapper {
-  font-size: 1.5rem;
-  height: 8rem;
-  background-color: darkgray;
+  font-size: 1rem;
+  background-color: rgb(177, 177, 177);
 }
-
-.welcome-wrapper {
-  width: 45rem;
+.link-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: 0.05rem solid black;
+  padding-bottom: 0.4rem;
+}
+.banner-img {
+  border-bottom: 0.05rem solid black;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 8rem
+  display: none;
+}
+.banner-img-small {
+  border-bottom: 0.1rem solid black;
+  width: 100%;
+  margin: 0 auto;
+}
+.search-form-container{
+  margin-top: 1rem;
+  border: .05rem solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 7rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .nav-wrapper {
+    font-size: 0.6rem;
+  }
+  .search-text{
+    text-align: center;
+    font-size: .7rem;
+  }
+  .banner-img-small{
+    display: none;
+  }
+  .banner-img {
+    display: block;
+  }
+  .search-form-container{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
