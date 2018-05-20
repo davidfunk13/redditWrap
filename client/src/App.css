@@ -1,7 +1,7 @@
 .nav-wrapper {
   font-size: 1rem;
   background-color: rgb(177, 177, 177);
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 .link-wrapper {
   display: flex;
@@ -38,6 +38,14 @@
   margin-left: 5rem;
   height: 2rem;
 }
+.no-posts {
+  border: .05rem solid black;
+  height: 5rem;
+  margin-right: 5rem;
+  margin-left: 5rem;
+  margin-top: 1rem;
+  text-align: center;
+}
 
 
 
@@ -45,7 +53,7 @@
   /* For mobile phones: */
   .nav-wrapper {
     font-size: 0.6rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
   }
   .search-text{
     text-align: center;

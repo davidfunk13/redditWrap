@@ -10,6 +10,7 @@ import Card from "../../components/Card/Card";
 class Search extends Component {
     state = {
         search: '',
+        empty: 'There are no posts here',
     }
     handleInputChange = event => {
         const { id, value } = event.target;
@@ -45,11 +46,13 @@ class Search extends Component {
                 {this.props.posts.length ? (
                     <div className='has-posts'>
                         {this.props.posts.map(posts => (
-                            <Card/>
-))}
+                            <Card />
+                        ))}
                     </div>
                 ) : (
-                        <div className='no-posts'>not</div>
+                        <div className='no-posts'>
+                            <p>Nothing here! Please enter a subreddit into the search bar to get that reddit's posts!</p>
+                        </div>
                     )}
             </SearchContainer>
         );
