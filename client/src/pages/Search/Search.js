@@ -46,7 +46,8 @@ class Search extends Component {
                 {this.props.posts.length ? (
                     <div className='has-posts'>
                         {this.props.posts.map(posts => (
-                            <Card />
+                            <Card
+                            title={posts.title} />
                         ))}
                     </div>
                 ) : (

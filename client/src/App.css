@@ -1,3 +1,4 @@
+
 .nav-wrapper {
   font-size: 1rem;
   background-color: rgb(177, 177, 177);
@@ -32,11 +33,13 @@
   margin-right: 5rem;
 }
 .card-container {
+  display: flex;
+  
   border: .05rem solid black;
   margin-top: 1rem;
   margin-right: 5rem;
   margin-left: 5rem;
-  height: 2rem;
+  height: 100%;
 }
 .no-posts {
   border: .05rem solid black;
@@ -51,6 +54,14 @@
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
+  p {
+    font-size: .7rem;
+  }
+  .no-posts {
+    padding-top: 1rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }  
   .nav-wrapper {
     font-size: 0.6rem;
     margin-bottom: 2.5rem;

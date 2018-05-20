@@ -1,23 +1,26 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as postActionCreators from '../../actions/postActions'
+import React, { Component } from 'react';
+import placeholder from './images/placeholder.png'
 
-class Card extends Component {
-    render() {
-        return (
-            <div className='card-container'>
-                {this.props.posts.title}
+const Card = props => {
+    return (
+        <div className='card-container'>
+            <div className='post-image'>
+                <img src={placeholder} alt="" />
             </div>
-        )
-    }
+            <div className='post-info'>
+            <div>
+                <h1>Post Title:</h1>
+                <p className='post-title'>{props.title}</p>
+            </div>
+                <p className='post-author'>{props.author}</p>
+                {/* <p className='post-author'>{props.}</p> */}
+            </div>
+            {props.children}
+        </div>
+
+    )
 }
-function mapStateToProps(state) {
-    return{
-        posts: state.posts,
-    }
-}
 
 
 
-export default connect(mapStateToProps)(Card);
+export default Card
