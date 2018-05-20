@@ -28,16 +28,16 @@ class Search extends Component {
     };
     render() {
         return (
-                <div className='search-form-container'>
-                 <p className='search-text'>Please Search for a subreddit to return its contents!</p>
-                 <div className='search-form'>
+            <div className='search-form-container'>
+                <p className='search-text'>Please Search for a subreddit to return its contents!</p>
+                <div className='search-form'>
                     <SearchForm
                         id='search'
                         onChange={this.handleInputChange}
                     />
-                    </div>
-                    <button className='search-button' onClick={this.handleSearch}>Search</button>
                 </div>
+                <button className='search-button' onClick={this.handleSearch}>Search</button>
+            </div>
         );
     }
 }
