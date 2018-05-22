@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import placeholder from "./images/placeholder.png";
+import React from "react";
+// import placeholder from "./images/placeholder.png";
 
 const ImageCard = props => {
   return (
-    <div className="card-container">
-      <img className="post-image" src={placeholder} alt="" />
+    <div data={props.type} className="card-container">
+      <img className="post-image" src={props.img} alt="" />
       <div className="post-info">
         <div>
           <h1>Post Title:</h1>

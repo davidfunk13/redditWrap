@@ -41,6 +41,7 @@ const postSorting = data => {
           thumbnail: "add custom image here",
           linkurl: post.url,
           previewObj: post.preview,
+          previewObjImage: post.preview.images["0"].resolutions[3],
           secureMedia: post.secure_media,
           nsfw: post.over_18
         };

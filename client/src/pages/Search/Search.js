@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as postActionCreators from "../../actions/postActions";
 import SearchContainer from "../../components/SearchContainer/SearchContainer";
-import {HostedVideoCard, RichVideoCard, SelfCard, ImageCard, LinkCard, UndefinedCard} from '../../components/Cards/'
+import { HostedVideoCard, RichVideoCard, SelfCard, ImageCard, LinkCard, UndefinedCard } from '../../components/Cards/'
 
 
 class Search extends Component {
@@ -18,7 +18,6 @@ class Search extends Component {
     this.setState({
       [id]: value
     });
-    console.log(this.state);
   };
 
   handleSearch = event => {
@@ -57,39 +56,55 @@ class Search extends Component {
               switch (posts.postType) {
                 case "link":
                   return <LinkCard
-                  title={posts.title}
+                    key={posts.id}
+                    type={posts.postType}
+                    title={posts.title}
+                    linkImg={posts.previewObjImage}
                   />;
                 case "img":
                   return <ImageCard
-                  title={posts.title}
+                    key={posts.id}
+                    type={posts.postType}
+                    img={posts.img}
+                    title={posts.title}
                   />;
                 case "rich-video":
                   return <RichVideoCard
-                  title={posts.title}
+                    key={posts.id}
+                    type={posts.postType}
+                    title={posts.title}
                   />;
                 case "hosted-video":
                   return <HostedVideoCard
-                  title={posts.title}
+                    key={posts.id}
+                    type={posts.postType}
+                    title={posts.title}
                   />;
                 case "undefined":
                   return <UndefinedCard
-                  title={posts.title}
+                    key={posts.id}
+                    type={posts.postType}
+                    title={posts.title}
                   />;
                 case "self":
                   return <SelfCard
-                  title={posts.title}
+                    key={posts.id}
+                    type={posts.postType}
+                    title={posts.title}
                   />;
+                default:
+                  return <p>Something went wrong</p>
               }
             })}
           </div>
         ) : (
-          <div className="no-posts">
-            <p>
-              Nothing here! Please enter a subreddit into the search bar to get
-              that reddit's posts!
+            <div className="no-posts">
+              <p>
+                Nothing here! Please enter a subreddit into the search bar to get
+                that reddit's posts!
             </p>
-          </div>
-        )}
+            </div>
+          )}
       </SearchContainer>
     );
   }

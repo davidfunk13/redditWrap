@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import placeholder from './images/placeholder.png'
 
 const HostedVideoCard = props => {
     return (
-        <div className='card-container'>
+        <div data={props.type} className='card-container'>
             <img className='post-image' src={placeholder} alt="" />
             <div className='post-info'>
                 <div>

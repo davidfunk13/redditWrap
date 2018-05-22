@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import placeholder from './images/placeholder.png'
 
 const UndefinedCard = props => {
     return (
-        <div className='card-container'>
+        <div data={props.type} className='card-container'>
             <img className='post-image' src={placeholder} alt="" />
             <div className='post-info'>
                 <div>
@@ -11,7 +11,6 @@ const UndefinedCard = props => {
                     <p className='post-title'>{props.title}</p>
                 </div>
                 <p className='post-author'>{props.author}</p>
-                {/* <p className='post-author'>{props.}</p> */}
             </div>
             {props.children}
         </div>

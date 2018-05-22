@@ -1,16 +1,16 @@
 import { createStore, compose, applyMiddleware } from "redux";
-import { createLogger } from "redux-logger";
+// import { createLogger } from "redux-logger";
 import thunk from "redux-thunk";
 
 import rootReducer from "./reducers/rootReducer";
 
 export default function configureStore(initialState) {
   const middleware = [
-    createLogger({
-      collapsed: false,
-      duration: true,
-      diff: true
-    }),
+    // createLogger({
+    //   collapsed: false,
+    //   duration: true,
+    //   diff: true
+    // }),
     thunk
   ];
 

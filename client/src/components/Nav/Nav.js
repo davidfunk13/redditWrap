@@ -6,8 +6,8 @@ const Nav = props => {
   return (
 
     <div className='nav-wrapper'>
-      <img className='banner-img' src={bannerimg} />
-      <img className='banner-img-small' src={bannerimgsmall} />
+      <img alt='banner' className='banner-img' src={bannerimg} />
+      <img alt='banner' className='banner-img-small' src={bannerimgsmall} />
       <div className='link-wrapper'>
         <Link to="/">Home</Link>
         <Link to="/search">Search</Link>
