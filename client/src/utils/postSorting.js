@@ -26,6 +26,9 @@ const postSorting = data => {
         results.push(imgPost);
         break;
       case "link":
+      function getPostImage(post) {
+        console.log(`get post image ${post}`)
+      }
         let linkPost = {
           id: post.id,
           postHint: post.post_hint,
@@ -41,7 +44,7 @@ const postSorting = data => {
           thumbnail: "add custom image here",
           linkurl: post.url,
           previewObj: post.preview,
-          previewObjImage: post.preview.images["0"].resolutions[3],
+          previewObjImage: this.getPostImage,
           secureMedia: post.secure_media,
           nsfw: post.over_18
         };

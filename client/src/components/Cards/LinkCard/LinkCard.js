@@ -4,7 +4,7 @@ import placeholder from './images/placeholder.png'
 const LinkCard = props => {
     return (
         <div data={props.type} className='card-container'>
-            <img className='post-image' src={placeholder} alt="" />
+            <img className='post-image' src={props.linkImg} alt="" />
             <div className='post-info'>
                 <div>
                     <h1>Post Title:</h1>
