@@ -5,13 +5,10 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as postActionCreators from "../../actions/postActions";
 import SearchContainer from "../../components/SearchContainer/SearchContainer";
-import Card from "../../components/Card/Card";
+import {HostedVideoCard, RichVideoCard, SelfCard, ImageCard, LinkCard, UndefinedCard} from '../../components/Cards/'
+
 
 class Search extends Component {
-  postFilter = posts => {
-    return <div>hello</div>;
-  };
-
   state = {
     search: "",
     empty: "There are no posts here"
@@ -59,17 +56,29 @@ class Search extends Component {
             {this.props.posts.map(posts => {
               switch (posts.postType) {
                 case "link":
-                  return <div className="link-post">{posts.postType}</div>;
+                  return <LinkCard
+                  title={posts.title}
+                  />;
                 case "img":
-                  return <div className="img-post">{posts.postType}</div>;
+                  return <ImageCard
+                  title={posts.title}
+                  />;
                 case "rich-video":
-                  return <div className="rich-post">{posts.postType}</div>;
+                  return <RichVideoCard
+                  title={posts.title}
+                  />;
                 case "hosted-video":
-                  return <div className="hosted-post">{posts.postType}</div>;
+                  return <HostedVideoCard
+                  title={posts.title}
+                  />;
                 case "undefined":
-                  return <div className="undefined-post">{posts.postType}</div>;
+                  return <UndefinedCard
+                  title={posts.title}
+                  />;
                 case "self":
-                  return <div className="self-post">{posts.postType}</div>;
+                  return <SelfCard
+                  title={posts.title}
+                  />;
               }
             })}
           </div>

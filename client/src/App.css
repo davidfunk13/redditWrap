@@ -1,4 +1,6 @@
-
+h1, h2{
+  font-size: 1rem;
+}
 .nav-wrapper {
   font-size: 1rem;
   background-color: rgb(177, 177, 177);
@@ -34,12 +36,13 @@
 }
 .card-container {
   display: flex;
-  
   border: .05rem solid black;
   margin-top: 1rem;
   margin-right: 5rem;
   margin-left: 5rem;
   height: 100%;
+  padding: 1rem;
+  /* overflow:auto; */
 }
 .no-posts {
   border: .05rem solid black;
@@ -48,6 +51,10 @@
   margin-left: 5rem;
   margin-top: 1rem;
   text-align: center;
+}
+.post-image {
+  height: 6rem;
+  margin-right: 2rem;
 }
 
 
@@ -62,6 +69,11 @@
     margin-right: 2rem;
     margin-left: 2rem;
   }  
+  .card-container {
+    padding: .5rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
   .nav-wrapper {
     font-size: 0.6rem;
     margin-bottom: 2.5rem;
@@ -80,4 +92,10 @@
     margin-left: 2rem;
     margin-right: 2rem;
   }
+  .post-image {
+    height: 4rem;
+    margin-right: 1rem;
+  }
+  
+
 }
